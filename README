@@ -1,0 +1,19 @@
+To run the evaluation code in this format:
+$ python3 evaluate.py input/ output/
+To change which answer is being submitted, change the file listen
+on line 26.
+
+input/ref/
+Directory of the reference trainval file. To extract a correct
+solution, run from this directory:
+$ python3 extract.py
+
+input/res/
+Directory of submissions.
+empty.json : an empty json file
+small.json : the 10 bounding boxes used in the example bboxEval code
+full.json  : the submission extracted from trainval using extract.py
+
+output/
+Directory of output score.
+scores.txt will contain the output IOU APs after evaluate.py is run.
